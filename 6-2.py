@@ -1,13 +1,16 @@
 ###
 # Counts vowels in the text
 #
-text = "This is a sample text."
-vowels = "aeiouAEIOU"
+text = input("Enter text here: ")
+vowels = "aeiouyAEIOUY"
 vowel_count = 0
+index = 0
 
 # Count vowels in the text
-for char in text:
+while index < len(text):
+    char = text[index]
     if char in vowels:
         vowel_count += 1
+    index += 1      # Increase index to move to next character
 
 print(f"The number of vowels in the text is: {vowel_count}")
